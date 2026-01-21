@@ -1,0 +1,115 @@
+/* ===============================
+   EDUCATION TIMELINE
+================================ */
+
+.education-timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+/* EDUCATION ITEM */
+.edu-item {
+    position: relative;
+    padding: 30px 35px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.06)
+    );
+
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.edu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-deep);
+}
+
+/* YEAR BADGE */
+.edu-year {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* DEGREE */
+.edu-item h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+/* INSTITUTE */
+.edu-institute {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* SCORE */
+.edu-score {
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    .edu-item {
+        padding: 25px;
+    }
+
+    .edu-item h2 {
+        font-size: 1.4rem;
+    }
+}
+
+.background-shapes {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-shapes span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #dbeafe, transparent 70%);
+    filter: blur(60px);
+    animation: float 18s infinite linear;
+}
+
+.background-shapes span:nth-child(1) {
+    top: 10%;
+    left: 5%;
+}
+
+.background-shapes span:nth-child(2) {
+    top: 50%;
+    left: 60%;
+    animation-duration: 22s;
+}
+
+.background-shapes span:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 26s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+

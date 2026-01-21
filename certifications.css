@@ -1,0 +1,97 @@
+/* ===============================
+   CERTIFICATION CARD
+================================ */
+
+.certificate-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 45px;
+    align-items: center;
+}
+
+/* IMAGE */
+.certificate-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.certificate-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* CONTENT */
+.certificate-content h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cert-provider {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.cert-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .certificate-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.background-shapes {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-shapes span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #dbeafe, transparent 70%);
+    filter: blur(60px);
+    animation: float 18s infinite linear;
+}
+
+.background-shapes span:nth-child(1) {
+    top: 10%;
+    left: 5%;
+}
+
+.background-shapes span:nth-child(2) {
+    top: 50%;
+    left: 60%;
+    animation-duration: 22s;
+}
+
+.background-shapes span:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 26s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
