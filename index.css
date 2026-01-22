@@ -192,3 +192,55 @@ footer {
     50% { transform: translateY(-40px); }
     100% { transform: translateY(0); }
 }
+
+/* ===============================
+ HERO OPEN ANIMATION
+================================ */
+
+.hero-left,
+.hero-right {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroReveal 0.9s ease forwards;
+}
+
+/* Delay right side slightly */
+.hero-right {
+  animation-delay: 0.15s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-welcome {
+  transition: letter-spacing 0.3s ease, transform 0.3s ease;
+}
+
+.hero-welcome:hover {
+  letter-spacing: 1px;
+  transform: translateY(-3px);
+}
+
+.hero-links a {
+  position: relative;
+  text-decoration: none;
+}
+
+.hero-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.hero-links a:hover::after {
+  width: 100%;
+}
