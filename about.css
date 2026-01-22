@@ -20,8 +20,14 @@
     max-width: 320px;
     border-radius: 22px;
     box-shadow: var(--shadow-soft);
+
+    opacity: 0;
+    animation: aboutImageIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 
 /* Subtle hover – premium feel */
 .about-image img:hover {
@@ -36,6 +42,12 @@
     color: var(--text-muted);
 }
 
+.about-text {
+    opacity: 0;
+    animation: aboutTextIn 0.8s ease forwards;
+    animation-delay: 0.45s;
+}
+
 @media (max-width: 900px) {
     .about-layout {
         grid-template-columns: 1fr;
@@ -45,5 +57,39 @@
 
     .about-image img {
         max-width: 300px;
+        animation-delay: 0.15s; /* ⬅ add this */
+    }
+
+    .about-text {
+        animation-delay: 0.3s; /* ⬅ add this */
+    }
+}
+
+
+/* ===============================
+   ABOUT PAGE ENTRANCE ANIMATIONS
+================================ */
+
+/* Image slide-in from left */
+@keyframes aboutImageIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Text fade-up */
+@keyframes aboutTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
