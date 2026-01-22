@@ -21,15 +21,6 @@ body {
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
 :root {
   /* Default = BRIGHT */
   --bg-main: #f4f7fb;
@@ -135,7 +126,7 @@ section {
 }
 
 section:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-deep);
 }
 
@@ -223,11 +214,6 @@ footer {
    PAGE FADE TRANSITIONS
 ================================ */
 
-body {
-    opacity: 1;
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 body.fade-out {
     opacity: 0;
 }
@@ -305,10 +291,6 @@ body.fade-out {
 
 /* ===============================
    PROJECT IMAGE (PROFESSIONAL)
-================================ */
-
-/* ===============================
-   PROJECT IMAGE (CONTROLLED & CLEAN)
 ================================ */
 
 .project-image {
